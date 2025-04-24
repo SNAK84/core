@@ -36,7 +36,7 @@ jobs:
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON }}
         id: python
-        uses: actions/setup-python@v5.5.0
+        uses: actions/setup-python@v5.6.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
           check-latest: true
@@ -222,9 +222,9 @@ jobs:
       - name: Create requirements file for custom build
         run: |
           touch requirements_custom.txt
-          echo "grpcio==1.71.0" >> requirements_custom.txt
-          echo "grpcio-status==1.71.0" >> requirements_custom.txt
-          echo "grpcio-reflection==1.71.0" >> requirements_custom.txt
+          echo "grpcio==1.72.0" >> requirements_custom.txt
+          echo "grpcio-status==1.72.0" >> requirements_custom.txt
+          echo "grpcio-reflection==1.72.0" >> requirements_custom.txt
 
       - name: Build wheels (custom)
         uses: cdce8p/wheels@master
