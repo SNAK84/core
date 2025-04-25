@@ -16,6 +16,7 @@ KEY_STATUS = "status"
 
 BINARY_SENSOR_DESCRIPTIONS = [
     BinarySensorEntityDescription(
+        name=KEY_STATUS,
         key=KEY_STATUS,
         translation_key=KEY_STATUS,
         device_class=BinarySensorDeviceClass.RUNNING,
