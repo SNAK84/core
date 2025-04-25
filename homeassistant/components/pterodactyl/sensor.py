@@ -44,6 +44,7 @@ class PterodactylSensorEntityDescription(SensorEntityDescription):
 
 SENSOR_DESCRIPTIONS = [
     PterodactylSensorEntityDescription(
+        name=KEY_CPU_UTILIZATION,
         key=KEY_CPU_UTILIZATION,
         translation_key=KEY_CPU_UTILIZATION,
         value_fn=lambda data: data.cpu_utilization,
@@ -53,6 +54,7 @@ SENSOR_DESCRIPTIONS = [
         suggested_display_precision=0,
     ),
     PterodactylSensorEntityDescription(
+        name=KEY_CPU_LIMIT,
         key=KEY_CPU_LIMIT,
         translation_key=KEY_CPU_LIMIT,
         value_fn=lambda data: data.cpu_limit,
@@ -63,6 +65,7 @@ SENSOR_DESCRIPTIONS = [
         entity_registry_enabled_default=False,
     ),
     PterodactylSensorEntityDescription(
+        name=KEY_MEMORY_USAGE,
         key=KEY_MEMORY_USAGE,
         translation_key=KEY_MEMORY_USAGE,
         value_fn=lambda data: data.memory_usage,
@@ -70,10 +73,11 @@ SENSOR_DESCRIPTIONS = [
         device_class=SensorDeviceClass.DATA_SIZE,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfInformation.BYTES,
-        suggested_unit_of_measurement=UnitOfInformation.GIGABYTES,
+        suggested_unit_of_measurement=UnitOfInformation.GIBIBYTES,
         suggested_display_precision=1,
     ),
     PterodactylSensorEntityDescription(
+        name=KEY_MEMORY_LIMIT,
         key=KEY_MEMORY_LIMIT,
         translation_key=KEY_MEMORY_LIMIT,
         value_fn=lambda data: data.memory_limit,
@@ -81,11 +85,12 @@ SENSOR_DESCRIPTIONS = [
         state_class=SensorStateClass.MEASUREMENT,
         entity_category=EntityCategory.DIAGNOSTIC,
         native_unit_of_measurement=UnitOfInformation.MEGABYTES,
-        suggested_unit_of_measurement=UnitOfInformation.GIGABYTES,
+        suggested_unit_of_measurement=UnitOfInformation.GIBIBYTES,
         suggested_display_precision=1,
         entity_registry_enabled_default=False,
     ),
     PterodactylSensorEntityDescription(
+        name=KEY_DISK_USAGE,
         key=KEY_DISK_USAGE,
         translation_key=KEY_DISK_USAGE,
         value_fn=lambda data: data.disk_usage,
@@ -93,10 +98,11 @@ SENSOR_DESCRIPTIONS = [
         state_class=SensorStateClass.MEASUREMENT,
         entity_category=EntityCategory.DIAGNOSTIC,
         native_unit_of_measurement=UnitOfInformation.BYTES,
-        suggested_unit_of_measurement=UnitOfInformation.GIGABYTES,
+        suggested_unit_of_measurement=UnitOfInformation.GIBIBYTES,
         suggested_display_precision=1,
     ),
     PterodactylSensorEntityDescription(
+        name=KEY_DISK_LIMIT,
         key=KEY_DISK_LIMIT,
         translation_key=KEY_DISK_LIMIT,
         value_fn=lambda data: data.disk_limit,
@@ -104,11 +110,12 @@ SENSOR_DESCRIPTIONS = [
         device_class=SensorDeviceClass.DATA_SIZE,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfInformation.MEGABYTES,
-        suggested_unit_of_measurement=UnitOfInformation.GIGABYTES,
+        suggested_unit_of_measurement=UnitOfInformation.GIBIBYTES,
         suggested_display_precision=1,
         entity_registry_enabled_default=False,
     ),
     PterodactylSensorEntityDescription(
+        name=KEY_NETWORK_INBOUND,
         key=KEY_NETWORK_INBOUND,
         translation_key=KEY_NETWORK_INBOUND,
         value_fn=lambda data: data.network_inbound,
@@ -116,11 +123,12 @@ SENSOR_DESCRIPTIONS = [
         device_class=SensorDeviceClass.DATA_SIZE,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfInformation.BYTES,
-        suggested_unit_of_measurement=UnitOfInformation.GIGABYTES,
+        suggested_unit_of_measurement=UnitOfInformation.GIBIBYTES,
         suggested_display_precision=1,
         entity_registry_enabled_default=False,
     ),
     PterodactylSensorEntityDescription(
+        name=KEY_NETWORK_OUTBOUND,
         key=KEY_NETWORK_OUTBOUND,
         translation_key=KEY_NETWORK_OUTBOUND,
         value_fn=lambda data: data.network_outbound,
@@ -128,11 +136,12 @@ SENSOR_DESCRIPTIONS = [
         device_class=SensorDeviceClass.DATA_SIZE,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfInformation.BYTES,
-        suggested_unit_of_measurement=UnitOfInformation.GIGABYTES,
+        suggested_unit_of_measurement=UnitOfInformation.GIBIBYTES,
         suggested_display_precision=1,
         entity_registry_enabled_default=False,
     ),
     PterodactylSensorEntityDescription(
+        name=KEY_UPTIME,
         key=KEY_UPTIME,
         translation_key=KEY_UPTIME,
         value_fn=(
